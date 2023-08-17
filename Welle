@@ -1,0 +1,69 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Folder = Instance.new("Folder")
+local UICorner = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(17, 18, 20)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.224116161, 0, 0.396478921, 0)
+Frame.Size = UDim2.new(0, 650, 0, 330)
+
+Folder.Parent = Frame
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = Frame
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.0848484859, 0)
+Frame_2.Size = UDim2.new(0, 650, 0, 2)
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.956923068, 0, 0, 0)
+ImageButton.Size = UDim2.new(0, 28, 0, 28)
+ImageButton.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+-- Scripts:
+
+local function HWRZ_fake_script() -- Folder.LocalScript 
+	local script = Instance.new('LocalScript', Folder)
+
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	
+	mouse.Move:Connect(function()
+		script.Parent.Position = UDim2.new(mouse.X/mouse.ViewSizeX, 0, mouse.Y/mouse.ViewSizeY, 0)
+	end)
+end
+coroutine.wrap(HWRZ_fake_script)()
+local function OXHGN_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local GuiCmds = script.Parent
+	local MainFrame = GuiCmds.Frame
+	
+	local function OpenFrame()
+	MainFrame.Visible = true
+	end
+end
+coroutine.wrap(OXHGN_fake_script)()

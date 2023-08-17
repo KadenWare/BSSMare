@@ -3,7 +3,7 @@
 -- Original Authtor: ???
 
 local NewInsts = {
-    NewEdgeCutta = Instance.new("UICorner")
+   NewEdgeCutta = Instance.new("UICorner")
 }
 for _, v in pairs(game.workspace.Collectibles:GetChildren()) do
     if string.find(v.Name, "") then
@@ -17,6 +17,7 @@ local MiniPage = Instance.new("Frame")
 local Destroy = Instance.new("TextButton")
 local GameText = Instance.new("TextLabel")
 local MainPage = Instance.new("Frame")
+local MainPageCorners = NewInsts.NewEdgeCutta
 local VersionText = Instance.new("TextLabel")
 local HomePage = Instance.new("Frame")
 local ImageGang = Instance.new("ImageLabel")
@@ -152,6 +153,8 @@ MiniPage.BorderSizePixel = 0
 MiniPage.Position = UDim2.new(0.361979187, 0, -0.7, 0)
 MiniPage.Size = UDim2.new(0, 530, 0, 25)
 
+
+
 Destroy.Name = "Destroy"
 Destroy.Parent = MiniPage
 Destroy.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -183,6 +186,10 @@ MainPage.Position = UDim2.new(0, 0, 1.0016675, 0)
 MainPage.Selectable = true
 MainPage.Size = UDim2.new(1, 0, 8.9163208, 0)
 
+
+MainPageCorners.Name = "Main Page Cut"
+MainPageCorners.Parent = MainPage
+
 VersionText.Name = "VersionText"
 VersionText.Parent = MainPage
 VersionText.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -190,7 +197,7 @@ VersionText.BackgroundTransparency = 1
 VersionText.Position = UDim2.new(-0.00158959627, 0, 0.914668798, 0)
 VersionText.Size = UDim2.new(0.213481352, 0, 0.08324752, 0)
 VersionText.Font = Enum.Font.Roboto
-VersionText.Text = "Version: 1.0.0"
+VersionText.Text = "Version: 0.0.1 / GUI #1"
 VersionText.TextColor3 = Color3.new(1, 1, 1)
 VersionText.TextSize = 16
 
@@ -201,6 +208,10 @@ HomePage.BackgroundTransparency = 1
 HomePage.BorderSizePixel = 0
 HomePage.Position = UDim2.new(0, 0, 0.132234111, 0)
 HomePage.Size = UDim2.new(1, 0, 0.782434821, 0)
+
+local HomePageCorners = instance.new("UICorner")
+HomePageCorners.Name = "Main Page Cut"
+HomePageCorners.Parent = HomePage
 
 ImageGang.Name = "ImageGang"
 ImageGang.Parent = HomePage

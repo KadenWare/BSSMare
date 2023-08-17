@@ -1,6 +1,9 @@
---Cracked by Yame Yukana iz da best#9827
-local NewINST = {
-NewEdgeCutter = instance.new("UICorner")
+-- Cracked  : best#9827
+-- Rework : Kadan6407
+-- Original Authtor: ???
+
+local NewInsts = {
+NewEdgeCutta = Instance.new("UICorner")
 }
 for _,v in pairs(game.workspace.Collectibles:GetChildren()) do
     if string.find(v.Name,"") then

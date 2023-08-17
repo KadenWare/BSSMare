@@ -2,9 +2,7 @@
 -- Rework : Kadan6407
 -- Original Authtor: ???
 
-local NewInsts = {
-   NewEdgeCutta = Instance.new("UICorner")
-}
+
 for _, v in pairs(game.workspace.Collectibles:GetChildren()) do
     if string.find(v.Name, "") then
         v:Destroy()
@@ -17,7 +15,7 @@ local MiniPage = Instance.new("Frame")
 local Destroy = Instance.new("TextButton")
 local GameText = Instance.new("TextLabel")
 local MainPage = Instance.new("Frame")
-local MainPageCorners = NewInsts.NewEdgeCutta
+local MainPageCorners = Instance.new("UICorner")
 local VersionText = Instance.new("TextLabel")
 local HomePage = Instance.new("Frame")
 local ImageGang = Instance.new("ImageLabel")
